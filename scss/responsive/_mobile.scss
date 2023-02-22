@@ -1,0 +1,81 @@
+@media only screen and (max-width: 600px) {
+  .text_page {
+    font-size: .8rem;
+  }
+  table {
+    border: 0;
+  }
+
+  table caption {
+    font-size: 1.3em;
+  }
+
+  table thead {
+    border: none;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+  }
+
+  table tr {
+    border-bottom: 3px solid #ddd;
+    display: block;
+    margin-bottom: 0.625em;
+  }
+
+  table td {
+    border-bottom: 1px solid #ddd;
+    display: block;
+    font-size: 0.8em;
+    text-align: end;
+  }
+
+  table td::before {
+    /*
+          * aria-label has no advantage, it won't be read inside a table
+          content: attr(aria-label);
+          */
+    content: attr(data-label);
+    float: right;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+
+  table td:last-child {
+    border-bottom: 0;
+  }
+  .ticket {
+    .modal {
+      .modal-dialog {
+        max-width: 90%;
+        .modal-content {
+          padding: 1rem;
+        }
+      }
+      img {
+        width: 40%;
+      }
+    }
+    .links_tickets {
+      .link {
+        font-size: .8rem;
+        padding: .7rem .5rem;
+      }
+    }
+    .search {
+      .form-group {
+        width: 50% !important;
+      }
+    }
+    .upload_file_btn {
+      padding: .75rem;
+    }
+  }
+  .show_tikcet .details_ticket .information li {
+    width: 100%;
+  }
+}

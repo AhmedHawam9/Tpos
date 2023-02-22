@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="ar">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tpos</title>
+
+    <!-- ? Main CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/fontawesome.min.css" />
+    <link rel="stylesheet" href="scss/style.min.css" />
+    <!-- ? Main CSS -->
+
+    <!-- ? Main JavaScript -->
+    <script src="js/main.js"></script>
+    <script src="js/jquery-3.5.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/all.min.js"></script>
+    <script src="js/fontawesome.min.js"></script>
+    <!-- ? Main JavaScript -->
+
+    <!--  ? Custom JavaScript -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.js"></script>
+    <!--  ? Custom JavaScript -->
+  </head>
+  <body>
+    <section class="content">
+      <div class="container">
+        <div class="d-flex justify-content-end">
+            <a href="upload.html" class="btn add_file">+ اضافة ملف اكسل</a>
+        </div>
+        <div class="row">
+          <div class="col-lg-6 col-md-6 col-12">
+            <div class="card_ticket">
+              <div class="description">
+                <h4 class="title">جميع التذاكر</h4>
+                <h5 class="count">+35610</h5>
+                <p class="text">جميع التذاكر الموجودة</p>
+              </div>
+              <img
+                src="./media/image/ticket_reservation.png"
+                alt="ticket_reservation"
+              />
+            </div>
+          </div>
+
+          <div class="col-lg-6 col-md-6 col-12">
+            <div class="card_ticket">
+              <div class="description">
+                <h4 class="title">تذاكر مُعلقة</h4>
+                <h5 class="count">+2510</h5>
+                <p class="text">تذاكر في انتظار الموافقة</p>
+              </div>
+              <img
+                src="./media/image/ticket_suspended.png"
+                alt="ticket_suspended"
+              />
+            </div>
+          </div>
+
+          <div class="col-lg-6 col-md-6 col-12">
+            <div class="card_ticket">
+              <div class="description">
+                <h4 class="title">تذاكر مُدرجة</h4>
+                <h5 class="count">+3615</h5>
+                <p class="text">تذاكر مدرجة الي السائقين</p>
+              </div>
+              <img src="./media/image/tickets_listed.png" alt="ticket_listed" />
+            </div>
+          </div>
+
+          <div class="col-lg-6 col-md-6 col-12">
+            <div class="card_ticket">
+              <div class="description">
+                <h4 class="title">تذاكر مُنتهية</h4>
+                <h5 class="count">+24310</h5>
+                <p class="text">تذاكر تمت بنجاح</p>
+              </div>
+              <img
+                src="./media/image/ticket_finished.png"
+                alt="ticket_finished"
+              />
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-3 col-md-12 col-12">
+            <div class="client">
+              <p class="title">معدل الإنجاز</p>
+              <div class="progress blue">
+                <span class="progress-left">
+                  <span class="progress-bar"></span>
+                </span>
+                <span class="progress-right">
+                  <span class="progress-bar"></span>
+                </span>
+                <div class="progress-value">90%</div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-9 col-md-12 col-12">
+            <div class="ticket_statistics">
+              <p class="title">احصائيات التذاكر</p>
+              <canvas id="myChart"></canvas>
+              <script>
+                var ctx = document.getElementById("myChart").getContext("2d");
+
+                var myChart = new Chart(ctx, {
+                  type: "line",
+                  data: {
+                    labels: [
+                      "Tokyo",
+                      "Mumbai",
+                      "Mexico City",
+                      "Shanghai",
+                      "Sao Paulo",
+                      "New York",
+                      "Karachi",
+                      "Buenos Aires",
+                      "Delhi",
+                      "Moscow",
+                    ],
+                    datasets: [
+                      {
+                        label: "Series 1", // Name the series
+                        data: [
+                          500, 50, 2424, 14040, 14141, 4111, 4544, 47, 5555,
+                          6811,
+                        ], // Specify the data values array
+                        fill: false,
+                        borderColor: "#2196f3", // Add custom color border (Line)
+                        backgroundColor: "#2196f3", // Add custom color background (Points and Fill)
+                        borderWidth: 1, // Specify bar border width
+                      },
+                      {
+                        label: "Series 2", // Name the series
+                        data: [
+                          1288, 88942, 44545, 7588, 99, 242, 1417, 5504, 75,
+                          457,
+                        ], // Specify the data values array
+                        fill: false,
+                        borderColor: "#4CAF50", // Add custom color border (Line)
+                        backgroundColor: "#4CAF50", // Add custom color background (Points and Fill)
+                        borderWidth: 1, // Specify bar border width
+                      },
+                    ],
+                  },
+                  options: {
+                    responsive: true, // Instruct chart js to respond nicely.
+                    maintainAspectRatio: false, // Add to prevent default behaviour of full-width/height
+                  },
+                });
+              </script>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>

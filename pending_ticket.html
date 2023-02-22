@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="ar">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tpos</title>
+
+    <!-- ? Main CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/fontawesome.min.css" />
+    <link rel="stylesheet" href="scss/style.min.css" />
+    <!-- ? Main CSS -->
+
+    <!-- ? Custom Css -->
+    <link rel="stylesheet" href="css/bootstrap-select.min.css" />
+    <!-- ? Custom Css -->
+
+    <!-- ? Main JavaScript -->
+    <script src="js/main.js"></script>
+    <script src="js/jquery-3.5.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/all.min.js"></script>
+    <script src="js/fontawesome.min.js"></script>
+    <!-- ? Main JavaScript -->
+    
+    <!--  ? Custom JavaScript -->
+    <script src="js/bootstrap-select.min.js"></script>
+    <!--  ? Custom JavaScript -->
+  </head>
+  <body>
+    <section class="ticket">
+        <div class="container">
+            <div class="d-flex justify-content-between align-items-center">
+                <div class="head">
+                    <h4 class="title_page">جميع التذاكر</h4>
+                    <p class="text_page">هنا يمكنك التعرف علي جميع التذاكر لديك</p>
+                </div>
+                <a href="upload.html" class="btn upload_file_btn">اضافة ملف اكسل</a>
+            </div>
+            <div class="links_tickets">
+                <a href="all_tickets.html" class="link">جميع التذاكر</a>
+                <a href="pending_ticket.html" class="link active">تذاكر مُعلقة</a>
+                <a href="listed_ticket.html" class="link">تذاكر مُدرجة</a>
+                <a href="remote_ticket.html" class="link">تذاكر نائية</a>
+                <a href="finish_ticket.html" class="link">تذاكر مٌنتهية</a>
+            </div>
+            <div class="search">
+                <div class="form-group">
+                    <input type="search" name="" class="form-control" placeholder="ابحث برقم التذكرة او نوع الجهاز ...">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </div>
+                <div class="form-group">
+                    <select name="" id="" class="form-control selectpicker" title="فلتر بحث">
+                        <option value="">نوع الجهاز</option>
+                        <option value="">المنطقة الفرعية</option>
+                        <option value="">وقت الادراج</option>
+                    </select>
+                </div>
+            </div>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>رقم التذكرة</th>
+                        <th>نوع العميل</th>
+                        <th>حالة التذكرة</th>
+                        <th>المنطقة الفرعية</th>
+                        <th>المنطقة النائية</th>
+                        <th>وقت الادراج</th>
+                        <th>نوع الجهاز</th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="pending">
+                        <td data-label="رقم التذكرة">#12345678</td>
+                        <td data-label="نوع العميل" class="client_category"><span class="normal">Normal</span></td>
+                        <td data-label="حالة التذكرة" class="status"><span>مُعلقة</span></td>
+                        <td data-label="المنطقة الفرعية">حي الطريفي</td>
+                        <td data-lebel="المنطقة النائية">--</td>
+                        <td data-label="وقت الادراج">12:30:24</td>
+                        <td data-label="نوع الجهاز">ماكينة سحب</td>
+                        <td data-label="الاجرائات">
+                            <div class="dropdown">
+                                <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    <i class="fa-solid fa-ellipsis"></i>
+                                </button>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="show_ticket.html">عرض</a></li>
+                                    <li><a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target="#EditModal">تعديل</a></li>
+                                </ul>
+                              </div>
+                        </td>
+                    </tr>
+                    <tr class="pending">
+                        <td data-label="رقم التذكرة">#12345678</td>
+                        <td data-label="نوع العميل" class="client_category"><span class="normal">Normal</span></td>
+                        <td data-label="حالة التذكرة" class="status"><span>مُعلقة</span></td>
+                        <td data-label="المنطقة الفرعية">حي الطريفي</td>
+                        <td data-lebel="المنطقة النائية">--</td>
+                        <td data-label="وقت الادراج">12:30:24</td>
+                        <td data-label="نوع الجهاز">ماكينة سحب</td>
+                        <td data-label="الاجرائات">
+                            <div class="dropdown">
+                                <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    <i class="fa-solid fa-ellipsis"></i>
+                                </button>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="show_ticket.html">عرض</a></li>
+                                    <li><a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target="#EditModal">تعديل</a></li>
+                                </ul>
+                              </div>
+                        </td>
+                    </tr>
+                    <tr class="pending">
+                        <td data-label="رقم التذكرة">#12345678</td>
+                        <td data-label="نوع العميل" class="client_category"><span class="normal">Normal</span></td>
+                        <td data-label="حالة التذكرة" class="status"><span>مُعلقة</span></td>
+                        <td data-label="المنطقة الفرعية">حي الطريفي</td>
+                        <td data-lebel="المنطقة النائية">--</td>
+                        <td data-label="وقت الادراج">12:30:24</td>
+                        <td data-label="نوع الجهاز">ماكينة سحب</td>
+                        <td data-label="الاجرائات">
+                            <div class="dropdown">
+                                <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    <i class="fa-solid fa-ellipsis"></i>
+                                </button>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="show_ticket.html">عرض</a></li>
+                                    <li><a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target="#EditModal">تعديل</a></li>
+                                </ul>
+                              </div>
+                        </td>
+                    </tr>
+                    <tr class="pending">
+                        <td data-label="رقم التذكرة">#12345678</td>
+                        <td data-label="نوع العميل" class="client_category"><span class="normal">Normal</span></td>
+                        <td data-label="حالة التذكرة" class="status"><span>مُعلقة</span></td>
+                        <td data-label="المنطقة الفرعية">حي الطريفي</td>
+                        <td data-lebel="المنطقة النائية">--</td>
+                        <td data-label="وقت الادراج">12:30:24</td>
+                        <td data-label="نوع الجهاز">ماكينة سحب</td>
+                        <td data-label="الاجرائات">
+                            <div class="dropdown">
+                                <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    <i class="fa-solid fa-ellipsis"></i>
+                                </button>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="show_ticket.html">عرض</a></li>
+                                    <li><a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target="#EditModal">تعديل</a></li>
+                                </ul>
+                              </div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            
+            <!-- Modal Edit Ticket -->
+            <div class="modal fade" id="EditModal" tabindex="-1" aria-labelledby="EditModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <img src="./media/image/edit.png" alt="edit">
+                            <h4 class="title">قم بتعديل  بيانات التذكرة المُعلقة</h4>
+                            <form class="row">
+                                <div class="col-lg-6 col-md-6 col-12">
+                                    <div class="form-group">
+                                    <label for="">نوع العميل</label>
+                                    <select name="" id="" class="selectpicker form-control" title="قم بتحديد هوية العميل">
+                                        <option value="">تيست 1</option>
+                                        <option value="">تيست 2</option>
+                                        <option value="">تيست 3</option>
+                                    </select>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6 col-md-6 col-12">
+                                    <div class="form-group">
+                                    <label for="">نوع التذكرة</label>
+                                    <select name="" id="" class="selectpicker form-control" title="قم بتحديد نوع التذكرة">
+                                        <option value="">تيست 1</option>
+                                        <option value="">تيست 2</option>
+                                        <option value="">تيست 3</option>
+                                    </select>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6 col-md-6 col-12">
+                                    <div class="form-group">
+                                    <label for="">نوع الجهاز</label>
+                                    <select name="" id="" class="selectpicker form-control" title="قم بتحديد نوع الجهاز">
+                                        <option value="">تيست 1</option>
+                                        <option value="">تيست 2</option>
+                                        <option value="">تيست 3</option>
+                                    </select>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6 col-md-6 col-12">
+                                    <div class="form-group">
+                                    <label for="">المنطقة</label>
+                                    <select name="" id="" class="selectpicker form-control" title="قم بتحديد المطقة المذكورة">
+                                        <option value="">تيست 1</option>
+                                        <option value="">تيست 2</option>
+                                        <option value="">تيست 3</option>
+                                    </select>
+                                    </div>
+                                </div>
+                                <button type="button" class="btn submit_btn" data-bs-toggle="modal" data-bs-target="#ChooseTechnicalModal">حفظ البيانات</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+  
+            <!-- Modal Choose Technical -->
+            <div class="modal fade" id="ChooseTechnicalModal" tabindex="-1" aria-labelledby="ChooseTechnicalModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <img src="./media/image/choose.png" alt="choose">
+                            <h4 class="title">من فضلك قم بأختيار الفني</h4>
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th>اسم الفني</th>
+                                        <th>رقم الهاتف</th>
+                                        <th>المناطق الفرعية</th>
+                                        <th>اجمالي التذاكر</th>
+                                        <th>التذاكر المُتبقية</th>
+                                        <th>سعة الفني</th>
+                                        <th></th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>
+                                            <img src="./media/image/7w7w.jpg" alt="person">
+                                            <span class="name">احمد حوام</span>
+                                        </td>
+                                        <td>0123654789</td>
+                                        <td>المنطقة الوسطي المراكز الغربية الدمام </td>
+                                        <td>( vip 2 ) 8</td>
+                                        <td>( vip 2 ) 2</td>
+                                        <td>4</td>
+                                        <td><button type="button" id="ChooseTechnicalButton" class="btn btn-outline-success">اختيار</button></td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <img src="./media/image/7w7w.jpg" alt="person">
+                                            <span class="name">احمد حوام</span>
+                                        </td>
+                                        <td>0123654789</td>
+                                        <td>المنطقة الوسطي المراكز الغربية الدمام </td>
+                                        <td>( vip 2 ) 8</td>
+                                        <td>( vip 2 ) 2</td>
+                                        <td>4</td>
+                                        <td><button type="button" id="ChooseTechnicalButton" class="btn btn-outline-success">اختيار</button></td>
+                                    </tr>
+                                </tbody>
+                                <script>
+                                    $("#ChooseTechnicalButton").click(function () {
+                                      Swal.fire({
+                                        position: "top-end",
+                                        icon: "success",
+                                        title: "تم ادراج التذكرة للفني بنجاح",
+                                        showConfirmButton: false,
+                                        timer: 3000,
+                                      });
+                                    });
+                                  </script>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+  </body>
+</html>
